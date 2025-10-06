@@ -1,0 +1,58 @@
+/* SEARCHBAR COMPONENT STYLING */
+
+.search-bar {
+	height: 60px;
+	display: flex;
+	padding: 0 25px;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.search-bar .container, .search-bar > button {
+	height: 100%;
+}
+
+.search-bar .container {
+	gap: 20px;
+	width: 80%;
+	display: inherit;
+	min-width: 275px;
+	align-items: inherit;
+	padding: 10px 15px;
+	border-radius: 20px;
+	box-shadow: 0px 0px 15px 0.1px #00000017;
+}
+
+.search-bar .container button {
+	width: 25px;
+	height: 25px;
+	border: none;
+	display: flex;
+	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+	background: transparent;
+}
+
+.search-bar .container button img {
+	width: 22px;
+	height: 22px;
+}
+
+.search-bar .container input {
+	height: 100%;
+	border: none;
+	outline: none;
+	font-size: 18px;
+	min-width: 200px;
+}
+
+.search-bar > button {
+	width: 60px;
+	height: 60px;
+	border: none;
+	cursor: pointer;
+	border-radius: 20px;
+	background: var(--secondary-background-color);
+}

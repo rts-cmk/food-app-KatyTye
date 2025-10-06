@@ -1,0 +1,39 @@
+/* HEADER COMPONENT STYLING */
+
+.first-header, .second-header {
+	display: flex;
+	padding: 25px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* first header */
+.first-header>img {
+	width: 60px;
+	height: 60px;
+	border-radius: 10px;
+}
+
+.first-header figure figcaption {
+	font-size: 18px;
+	font-family: "Poppins";
+	color: var(--secondary-text-color);
+}
+
+.first-header figure > img {
+	cursor: pointer;
+}
+
+/* second header */
+.second-header button {
+	width: 20px;
+	height: 20px;
+	border: none;
+	cursor: pointer;
+	background: transparent;
+}
+
+.second-header button img {
+	width: inherit;
+	height: inherit;
+}

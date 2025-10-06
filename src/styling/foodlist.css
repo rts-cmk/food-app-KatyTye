@@ -1,0 +1,70 @@
+/* FOODLIST COMPONENT STYLING */
+
+.food-list {
+	gap: 75px;
+	display: grid;
+	padding: 25px;
+	justify-items: center;
+	list-style-type: none;
+	grid-auto-rows: 185px;
+	grid-template-rows: 185px;
+	grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+}
+
+.food-list li {
+	display: flex;
+	padding: 10px;
+	min-width: 185px;
+	min-height: 225px;
+	border-radius: 20px;
+	flex-direction: column;
+	justify-content: space-between;
+	box-shadow: 0px 0px 15px 0.1px #00000017;
+}
+
+.food-list li figure {
+	width: 100%;
+	display: inherit;
+	align-items: center;
+	flex-direction: column;
+}
+
+.food-list li > figure > img {
+	height: 120px;
+}
+
+.food-list li > p > span {
+	display: block;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.food-list li > p {
+	width: 90%;
+	font-size: 14px;
+	min-height: 44px;
+}
+
+.food-list .sides {
+	display: inherit;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.food-list .sides button {
+	border: none;
+	cursor: pointer;
+	background: transparent;
+}
+
+.food-list .sides > figure {
+	gap: 5px;
+	display: inherit;
+	width: fit-content;
+	flex-direction: row;
+}
+
+.food-list .sides > figure > img {
+	width: 18px;
+	height: 18px;
+}
