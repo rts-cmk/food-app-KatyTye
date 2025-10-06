@@ -1,16 +1,17 @@
-function MainHeader() {
+import logo from '../assets/logo.svg';
+import profile from '../assets/profile.jpg';
+
+export default function MainHeader() {
 	return (
-		<header className="main-header">
+		<header className="first-header">
 			<figure>
-				<img src="../assets/logo.svg" alt="logo" id="logo" />
+				<img src={logo} alt="logo" id="logo" />
 				<figcaption>
 					Order your favourite food!
 				</figcaption>
 			</figure>
 
-			<img src="../assets/profile.jpg" alt="profile icon" />
+			<img src={profile} alt="profile icon" />
 		</header>
 	)
 }
-
-export default MainHeader
