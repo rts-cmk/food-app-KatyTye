@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Hamburger",
+		"food": "Wendy's Cheeseburger",
+		"rated": 4.8,
+		"image": "burger"
+	},
+	{
+		"name": "Hamburger",
+		"food": "Wendy's Cheeseburger",
+		"rated": 4.8,
+		"image": "burger"
+	},
+	{
+		"name": "Hamburger",
+		"food": "Wendy's Cheeseburger",
+		"rated": 4.8,
+		"image": "burger"
+	},
+	{
+		"name": "Hamburger",
+		"food": "Wendy's Cheeseburger",
+		"rated": 4.8,
+		"image": "burger"
+	}
+]
