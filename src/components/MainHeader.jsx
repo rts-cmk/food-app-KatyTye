@@ -1,11 +1,19 @@
-import logo from '../assets/logo.svg';
+import { useNavigate } from 'react-router';
 import profile from '../assets/profile.jpg';
+import logo from '../assets/logo.svg';
+import "../styling/header.css"
 
 export default function MainHeader() {
+	const navigate = useNavigate()
+
+	function changePage(to) {
+		navigate(to)
+	}
+
 	return (
 		<header className="first-header">
 			<figure>
-				<img src={logo} alt="logo" id="logo" />
+				<img src={logo} alt="logo" id="logo" onClick={() => changePage("/")} />
 				<figcaption>
 					Order your favourite food!
 				</figcaption>

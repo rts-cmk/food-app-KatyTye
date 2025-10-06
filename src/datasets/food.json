@@ -1,26 +1,92 @@
 [
 	{
-		"name": "Hamburger",
-		"food": "Wendy's Cheeseburger",
-		"rated": 4.8,
-		"image": "burger"
+		"name": "Cheeseburger",
+		"food": "Wendy's Burger",
+		"rated": 4.9,
+		"image": "burger",
+		"price": 4.99,
+		"delivery": 28,
+		"information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, odit iusto, consequatur numquam magnam autem expedita placeat suscipit eum aliquid fugit? Voluptatibus placeat omnis dolores! Ut molestiae repellendus at facere!",
+		"meters": [
+			{
+				"value": 0,
+				"name": "Spicy"
+			}
+		]
 	},
 	{
 		"name": "Hamburger",
-		"food": "Wendy's Cheeseburger",
-		"rated": 4.8,
-		"image": "burger"
+		"food": "Veggie Burger",
+		"rated": 2.8,
+		"image": "burger",
+		"price": 4.98,
+		"delivery": 28,
+		"information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, odit iusto, consequatur numquam magnam autem expedita placeat suscipit eum aliquid fugit? Voluptatibus placeat omnis dolores! Ut molestiae repellendus at facere!",
+		"meters": [
+			{
+				"value": 0,
+				"name": "Spicy"
+			}
+		]
 	},
 	{
 		"name": "Hamburger",
-		"food": "Wendy's Cheeseburger",
-		"rated": 4.8,
-		"image": "burger"
+		"food": "Chicken Burger",
+		"rated": 3.8,
+		"image": "burger",
+		"price": 4.99,
+		"delivery": 28,
+		"information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, odit iusto, consequatur numquam magnam autem expedita placeat suscipit eum aliquid fugit? Voluptatibus placeat omnis dolores! Ut molestiae repellendus at facere!",
+		"meters": [
+			{
+				"value": 0,
+				"name": "Spicy"
+			}
+		]
 	},
 	{
 		"name": "Hamburger",
-		"food": "Wendy's Cheeseburger",
+		"food": "Wendy's Hamburger",
 		"rated": 4.8,
-		"image": "burger"
+		"image": "burger",
+		"price": 7.49,
+		"delivery": 28,
+		"information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, odit iusto, consequatur numquam magnam autem expedita placeat suscipit eum aliquid fugit? Voluptatibus placeat omnis dolores! Ut molestiae repellendus at facere!",
+		"meters": [
+			{
+				"value": 0,
+				"name": "Spicy"
+			}
+		]
+	},
+	{
+		"name": "Cheeseburger",
+		"food": "Wendy's Cheeseburger",
+		"rated": 3.8,
+		"image": "burger",
+		"price": 4.99,
+		"delivery": 28,
+		"information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, odit iusto, consequatur numquam magnam autem expedita placeat suscipit eum aliquid fugit? Voluptatibus placeat omnis dolores! Ut molestiae repellendus at facere!",
+		"meters": [
+			{
+				"value": 0,
+				"name": "Spicy"
+			}
+		]
+	},
+	{
+		"name": "Hamburger",
+		"food": "Wendy's Hamburger",
+		"rated": 4.8,
+		"image": "burger",
+		"price": 7.49,
+		"delivery": 28,
+		"information": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, odit iusto, consequatur numquam magnam autem expedita placeat suscipit eum aliquid fugit? Voluptatibus placeat omnis dolores! Ut molestiae repellendus at facere!",
+		"meters": [
+			{
+				"value": 0,
+				"name": "Spicy"
+			}
+		]
 	}
 ]
