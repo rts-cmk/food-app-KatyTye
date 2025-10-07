@@ -41,6 +41,7 @@
 }
 
 .search-bar .container input {
+	width: 75%;
 	height: 100%;
 	border: none;
 	outline: none;
@@ -55,4 +56,9 @@
 	cursor: pointer;
 	border-radius: 20px;
 	background: var(--secondary-background-color);
+}
+
+.search-bar > button > img {
+	width: 25px;
+	height: 25px;
 }

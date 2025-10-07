@@ -30,6 +30,11 @@
 	background: var(--secondary-background-color);
 }
 
+.bottom-footer .white-wrapper > button img {
+	width: 20px;
+	height: 20px;
+}
+
 .bottom-footer nav {
 	display: grid;
 	bottom: 75px;

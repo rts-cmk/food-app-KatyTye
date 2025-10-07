@@ -31,6 +31,7 @@
 
 .food-list li > figure > img {
 	height: 120px;
+	width: fit-content;
 }
 
 .food-list li > p > span {
@@ -67,4 +68,8 @@
 .food-list .sides > figure > img {
 	width: 18px;
 	height: 18px;
+}
+
+.food-list li > p > span {
+	cursor: unset;
 }

@@ -1,6 +1,6 @@
 /* HEADER COMPONENT STYLING */
 
-.first-header, .second-header {
+.first-header, .navigation-bar {
 	display: flex;
 	padding: 25px;
 	align-items: center;
@@ -24,8 +24,8 @@
 	cursor: pointer;
 }
 
-/* second header */
-.second-header button {
+/* navigation bar */
+.navigation-bar button {
 	width: 20px;
 	height: 20px;
 	border: none;
@@ -33,7 +33,7 @@
 	background: transparent;
 }
 
-.second-header button img {
+.navigation-bar button img {
 	width: inherit;
 	height: inherit;
 }

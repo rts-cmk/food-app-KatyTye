@@ -1,0 +1,49 @@
+/* PROFILE PAGE STYLING */
+
+.page-content.profile {
+	min-height: 65vh;
+}
+
+.page-content.profile.info > .fields {
+	z-index: 10;
+	display: flex;
+	position: relative;
+	margin-top: 135px;
+	padding-top: 75px;
+	padding-bottom: 250px;
+	align-items: center;
+	border-radius: 25px;
+	background: white;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.page-content.profile.info::before {
+	content: "";
+	z-index: 0;
+	width: 100vw;
+	height: 200px;
+	display: block;
+	position: absolute;
+	background: #f52a5e;
+	transform: translateY(0%);
+}
+
+.page-content.profile .navigation-bar {
+	z-index: 10;
+	position: relative;
+}
+
+.page-content.profile > h2 {
+	padding: 0 25px;
+}
+
+#profile {
+	top: -75px;
+	width: 140px;
+	height: 140px;
+	overflow: hidden;
+	position: absolute;
+	border-radius: 25px;
+	border: 3px solid red;
+}
