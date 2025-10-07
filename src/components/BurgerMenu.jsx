@@ -1,6 +1,6 @@
 import BottomSection from "./BottomSection";
 import { useState, useEffect } from "react";
-import Star from "../assets/star.svg";
+import Star from "../assets/icons/star.svg";
 
 export default function BurgerMenu({ search }) {
 	const [fetchedJSON, setFetchedJSON] = useState([]);
@@ -39,6 +39,21 @@ export default function BurgerMenu({ search }) {
 		setPortion((p) => (p > 1 ? p - 1 : p));
 	}
 
+	function returnMeters(list) {
+		return list.map((item) => {
+			return (
+				<div key={item.name}>
+					<p>{item.name}</p>
+					<input type="range" name={item.name} min={item.min[1]} max={item.max[1]} />
+					<div className="names">
+						<p className="green">{item.min[0]}</p>
+						<p className="red">{item.max[0]}</p>
+					</div>
+				</div>
+			)
+		})
+	}
+
 	const item = fetchedJSON.find((item) => item.food.replace(" ", "") === search.name);
 	const itemImage = item ? images[item.food.replace(" ", "")] : null;
 
@@ -58,11 +73,14 @@ export default function BurgerMenu({ search }) {
 						<img src={Star} alt="star icon" />
 						<figcaption>{item.rated}</figcaption>
 					</figure>
-					<p>- {item.delivery}</p>
+					<p>-</p>
+					<p>{item.delivery} mins</p>
 				</div>
 				<p>{item.information}</p>
 				<div className="rows">
-					<div className="row-one"></div>
+					<div className="row-one">
+						{returnMeters(item.meters)}
+					</div>
 					<div className="row-two">
 						<p>Portion</p>
 						<div className="buttons">

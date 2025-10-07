@@ -1,8 +1,8 @@
-import HeartBlack from "../assets/like_black.svg";
-import HeartRed from "../assets/like_red.svg";
+import HeartBlack from "../assets/icons/like_black.svg";
+import HeartRed from "../assets/icons/like_red.svg";
 import { useNavigate } from "react-router";
 import { useEffect, useState } from "react";
-import Star from "../assets/star.svg";
+import Star from "../assets/icons/star.svg";
 import "../styling/foodlist.css"
 
 export default function FoodList({ source }) {
@@ -68,7 +68,7 @@ export default function FoodList({ source }) {
 						<figure>
 							<img src={itemImage} alt="image of food" />
 						</figure>
-						<p onClick={() => changePage(item.name)}><span>{item.name}</span> {item.food}</p>
+						<p onClick={() => changePage(item.food.replace(" ", ""))}><span>{item.name}</span> {item.food}</p>
 						<div className="sides">
 							<figure>
 								<img src={Star} alt="star icon" />

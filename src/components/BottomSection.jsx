@@ -1,5 +1,5 @@
-import LogoutIcon from "../assets/logout.svg"
-import EditIcon from "../assets/edit.svg"
+import LogoutIcon from "../assets/icons/logout.svg"
+import EditIcon from "../assets/icons/edit.svg"
 import { useNavigate } from "react-router"
 
 export default function BottomSection({ menu, port, product }) {
@@ -11,7 +11,7 @@ export default function BottomSection({ menu, port, product }) {
 		} else {
 			localStorage.setItem("order", `${name}-${amount}`)
 		}
-		navigate("/profile/order")
+		navigate("/profile/orders")
 	}
 
 	if (menu) {

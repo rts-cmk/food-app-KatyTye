@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router"
-import FilterIcon from "../assets/filter.svg"
-import SearchIcon from "../assets/search.svg"
+import FilterIcon from "../assets/icons/filter.svg"
+import SearchIcon from "../assets/icons/search.svg"
 import "../styling/searchbar.css"
 
 export default function SearchBar() {

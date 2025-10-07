@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router"
-import ProfileIcon from "../assets/profile.svg"
-import HomeIcon from "../assets/home.svg"
-import ChatIcon from "../assets/chat.svg"
-import LikeIcon from "../assets/like.svg"
-import AddIcon from "../assets/add.svg"
+import ProfileIcon from "../assets/icons/profile.svg"
+import HomeIcon from "../assets/icons/home.svg"
+import ChatIcon from "../assets/icons/chat.svg"
+import LikeIcon from "../assets/icons/like.svg"
+import AddIcon from "../assets/icons/add.svg"
 import "../styling/footer.css"
 
 export default function MainFooter() {

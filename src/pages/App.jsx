@@ -7,8 +7,10 @@ function App() {
   return (
     <>
       <MainHeader />
-      <SearchBar />
-      <FoodList source={"../datasets/food.json"} />
+      <main className="page-content">
+        <SearchBar />
+        <FoodList source={"../datasets/food.json"} />
+      </main>
       <MainFooter />
     </>
   )

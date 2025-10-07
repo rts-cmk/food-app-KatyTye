@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router';
 import profile from '../assets/profile.jpg';
-import logo from '../assets/logo.svg';
+import logo from '../assets/icons/logo.svg';
 import "../styling/header.css"
 
 export default function MainHeader() {
