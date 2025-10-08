@@ -1,0 +1,65 @@
+/* BUTTONS STYLING */
+
+.last-section {
+	display: flex;
+	padding: 25px;
+	justify-content: space-between;
+}
+
+.last-section > p.medium-red, .last-section button {
+	height: 70px;
+	border: none;
+	font-size: 18px;
+	font-weight: bold;
+	border-radius: 15px;
+	color: var(--primary-button-color);
+	background: var(--secondary-background-color);
+}
+
+.last-section > p.medium-red {
+	width: 104px;
+	padding: 26px 0;
+	text-align: center;
+}
+
+.last-section > button.large-gray {
+	width: 239px;
+	cursor: pointer;
+	background: var(--primary-button-background-color);
+}
+
+.last-section > button.profile.large-gray {
+	width: 175px;
+}
+
+.last-section > button.large-red {
+	width: 175px;
+	cursor: pointer;
+	background: transparent;
+	color: var(--secondary-background-color);
+	border: 3px solid var(--secondary-background-color);
+}
+
+.last-section > button.profile {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.last-section > button.profile img {
+	width: 24px;
+	height: 24px;
+	margin-left: 25px;
+}
+
+.small-red {
+	width: 30px;
+	height: 30px;
+	border: none;
+	cursor: pointer;
+	font-weight: bold;
+	position: absolute;
+	border-radius: 10px;
+	color: var(--primary-button-color);
+	background: var(--secondary-background-color);
+}

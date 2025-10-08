@@ -1,0 +1,65 @@
+/* PROFILE PAGE STYLING */
+
+.first-header.info {
+	justify-content: center;
+}
+
+.first-header.info > img {
+	display: none;
+}
+
+.page-content.profile {
+	min-height: 65vh;
+}
+
+.page-content.profile.info > .fields {
+	z-index: 10;
+	display: flex;
+	position: relative;
+	margin-top: 100px;
+	padding-top: 75px;
+	align-items: center;
+	border-radius: 25px;
+	background: white;
+	justify-content: center;
+	flex-direction: column;
+	padding-bottom: 250px;
+}
+
+.page-content.profile.info {
+	position: relative;
+}
+
+.page-content.profile.info::before {
+	content: "";
+	z-index: 0;
+	width: 100vw;
+	height: 175px;
+	display: block;
+	position: absolute;
+	background: #f52a5e;
+	background-size: 100px;
+	transform: translateY(0%);
+	background-repeat: no-repeat;
+	background-position: left top, right top;
+	background-image: url(../../public/leftburger.png), url(../../public/rightburger.png);
+}
+
+.page-content.profile .navigation-bar {
+	z-index: 10;
+	position: relative;
+}
+
+.page-content.profile > h2 {
+	padding: 0 25px;
+}
+
+#profile {
+	top: -75px;
+	width: 140px;
+	height: 140px;
+	overflow: hidden;
+	position: absolute;
+	border-radius: 25px;
+	border: 3px solid red;
+}
