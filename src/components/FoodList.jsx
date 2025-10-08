@@ -47,13 +47,16 @@ export default function FoodList({ source }) {
 	}
 
 	async function updateHeart(target, item) {
-		if (localStorage.getItem("fav") && localStorage.getItem("fav").includes(item.food.replace(" ", ""))) {
-			localStorage.setItem("fav", localStorage.getItem("fav").replace(item.food.replace(" ", ""), ""))
-		} else if (localStorage.getItem("fav")) {
-			localStorage.setItem("fav", `${localStorage.getItem("fav")}${item.food.replace(" ", "")}`)
+		const foodName = `${item.food.replace(" ", "")}-1,`
+
+		if (!localStorage.getItem("fav")) {
+			localStorage.setItem("fav", foodName)
+		} else if (localStorage.getItem("fav").includes(foodName)) {
+			localStorage.setItem("fav", localStorage.getItem("fav").replace(foodName, ""))
 		} else {
-			localStorage.setItem("fav", `${item.food.replace(" ", "")}`)
+			localStorage.setItem("fav", `${localStorage.getItem("fav")}${foodName}`)
 		}
+
 		const heart = await returnHeart(item.food)
 		target.src = heart
 	}

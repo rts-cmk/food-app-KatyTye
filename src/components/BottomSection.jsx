@@ -7,9 +7,9 @@ export default function BottomSection({ menu, port, product }) {
 
 	function addOrder(name, amount) {
 		if (localStorage.getItem("order")) {
-			localStorage.setItem("order", `${window.localStorage.getItem("order")},${name}-${amount}`)
+			localStorage.setItem("order", `${window.localStorage.getItem("order")},${name}-${amount},`)
 		} else {
-			localStorage.setItem("order", `${name}-${amount}`)
+			localStorage.setItem("order", `${name}-${amount},`)
 		}
 		navigate("/profile/orders")
 	}

@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react";
 import "../styling/foodlist.css"
 
-export default function DataList({ source, local, name }) {
+export default function DataList({ local, name }) {
 	const [fetchedJSON, setFetchedJSON] = useState([])
+	const source = "../datasets/food.json"
+
+	if (!localStorage.getItem(local)) {
+		localStorage.setItem(local, "")
+	}
 
 	useEffect(() => {
-		import(/* @vite-ignore */ source)
+		import("../datasets/food.json")
 			.then((module) => setFetchedJSON(module.default))
 			.catch((err) => console.log("Could not load JSON: " + err))
 	}, [source])
@@ -47,15 +52,11 @@ export default function DataList({ source, local, name }) {
 	}
 
 	function removeItem(food, target) {
-		let newLocalStorage = localStorage.getItem(local)
+		let newLocalStorage = localStorage.getItem(local) || ""
 
 		newLocalStorage.split(",").forEach((item) => {
 			if (item.includes(food.replace(" ", ""))) {
-				if (item.includes(",")) {
-					newLocalStorage = newLocalStorage.replace(`${item},`, "")
-				} else {
-					newLocalStorage = newLocalStorage.replace(`${item}`, "")
-				}
+				newLocalStorage = newLocalStorage.replace(`${item},`, "")
 			}
 		})
 

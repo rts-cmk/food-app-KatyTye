@@ -10,9 +10,9 @@ function returnElements(param) {
 	if (param == "info") {
 		return <InfoMenu />
 	} else if (param == "orders") {
-		return <DataList source="../datasets/food.json" local="order" name={"Orders:"} />
+		return <DataList local="order" name="Orders:" />
 	} else if (param == "liked") {
-		return <p id="error">Liked list is under progress.</p>
+		return <DataList local="fav" name="Favorites" />
 	}
 
 	return <p id="error">Could Not Find Page.</p>
