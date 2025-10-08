@@ -5,7 +5,7 @@ export default function DataList({ source, local, name }) {
 	const [fetchedJSON, setFetchedJSON] = useState([])
 
 	useEffect(() => {
-		import(source)
+		import(/* @vite-ignore */ source)
 			.then((module) => setFetchedJSON(module.default))
 			.catch((err) => console.log("Could not load JSON: " + err))
 	}, [source])

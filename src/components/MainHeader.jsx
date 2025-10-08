@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import profile from '../assets/profile.jpg';
 import logo from '../assets/icons/logo.svg';
 import "../styling/header.css"
@@ -11,7 +11,7 @@ export default function MainHeader() {
 	}
 
 	return (
-		<header className="first-header">
+		<header className={"first-header " + useParams().page}>
 			<figure>
 				<img src={logo} alt="logo" id="logo" onClick={() => changePage("/")} />
 				<figcaption>

@@ -1,5 +1,13 @@
 /* PROFILE PAGE STYLING */
 
+.first-header.info {
+	justify-content: center;
+}
+
+.first-header.info > img {
+	display: none;
+}
+
 .page-content.profile {
 	min-height: 65vh;
 }
@@ -8,25 +16,33 @@
 	z-index: 10;
 	display: flex;
 	position: relative;
-	margin-top: 135px;
+	margin-top: 100px;
 	padding-top: 75px;
-	padding-bottom: 250px;
 	align-items: center;
 	border-radius: 25px;
 	background: white;
 	justify-content: center;
 	flex-direction: column;
+	padding-bottom: 250px;
+}
+
+.page-content.profile.info {
+	position: relative;
 }
 
 .page-content.profile.info::before {
 	content: "";
 	z-index: 0;
 	width: 100vw;
-	height: 200px;
+	height: 175px;
 	display: block;
 	position: absolute;
 	background: #f52a5e;
+	background-size: 100px;
 	transform: translateY(0%);
+	background-repeat: no-repeat;
+	background-position: left top, right top;
+	background-image: url(../../public/leftburger.png), url(../../public/rightburger.png);
 }
 
 .page-content.profile .navigation-bar {
