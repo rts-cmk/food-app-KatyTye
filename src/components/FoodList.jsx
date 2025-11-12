@@ -1,0 +1,92 @@
+import HeartBlack from "../assets/icons/like_black.svg";
+import HeartRed from "../assets/icons/like_red.svg";
+import { useNavigate } from "react-router";
+import { useEffect, useState } from "react";
+import Star from "../assets/icons/star.svg";
+import "../styling/foodlist.css"
+
+export default function FoodList({ source }) {
+	const [fetchedJSON, setFetchedJSON] = useState([])
+	const navigate = useNavigate()
+
+	useEffect(() => {
+		import("../datasets/food.json")
+			.then((module) => setFetchedJSON(module.default))
+			.catch((err) => console.log("Could not load JSON: " + err))
+	}, [source])
+
+	const [images, setImages] = useState({});
+
+	useEffect(() => {
+		async function fetchImages() {
+			const newImages = {};
+			for (const item of fetchedJSON) {
+				try {
+					const module = await import(`../assets/${item.image}.jpg`);
+					newImages[item.food] = module.default;
+				} catch (err) {
+					console.log("Could not load IMAGE: " + err);
+				}
+			}
+			setImages(newImages);
+		}
+		if (fetchedJSON.length > 0) {
+			fetchImages();
+		}
+	}, [fetchedJSON]);
+
+	function changePage(to) {
+		navigate(`/menu/${to}`)
+	}
+
+	function returnHeart(name) {
+		if (localStorage.getItem("fav") && localStorage.getItem("fav").includes(name.replace(" ", ""))) {
+			return HeartRed
+		}
+		return HeartBlack
+	}
+
+	async function updateHeart(target, item) {
+		const foodName = `${item.food.replace(" ", "")}-1,`
+
+		if (!localStorage.getItem("fav")) {
+			localStorage.setItem("fav", foodName)
+		} else if (localStorage.getItem("fav").includes(foodName)) {
+			localStorage.setItem("fav", localStorage.getItem("fav").replace(foodName, ""))
+		} else {
+			localStorage.setItem("fav", `${localStorage.getItem("fav")}${foodName}`)
+		}
+
+		const heart = await returnHeart(item.food)
+		target.src = heart
+	}
+
+	function returnListedItems() {
+		return fetchedJSON.map((item, idx) => {
+			const itemImage = images[item.food]
+			const HeartImage = returnHeart(item.food)
+			if (itemImage) {
+				return (
+					<li title={`${item.name} ${item.price}$`} key={"item.name" + idx}>
+						<figure>
+							<img src={itemImage} alt="image of food" />
+						</figure>
+						<p onClick={() => changePage(item.food.replace(" ", ""))}><span>{item.name}</span> {item.food}</p>
+						<div className="sides">
+							<figure>
+								<img src={Star} alt="star icon" />
+								<figcaption>{item.rated}</figcaption>
+							</figure>
+							<button>
+								<img onClick={event => updateHeart(event.target, item)} src={HeartImage} alt="like icon" />
+							</button>
+						</div>
+					</li>
+				);
+			}
+			return null;
+		});
+	}
+
+	return <ol className="food-list">{returnListedItems()}</ol>
+}

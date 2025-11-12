@@ -1,0 +1,30 @@
+/* INPUTFIELD COMPONENT STYLING */
+
+.input-field {
+	width: 100%;
+	min-height: 80px;
+	min-width: 300px;
+	max-width: 500px;
+}
+
+.input-field p {
+	padding: 5px;
+	position: relative;
+	font-weight: bold;
+	width: fit-content;
+	color: #808080;
+	background: white;
+	transform: translate(15px, 50%);
+}
+
+.input-field input {
+	width: 100%;
+	height: 70px;
+	outline: none;
+	font-size: 18px;
+	color: black;
+	padding: 0 30px;
+	border-radius: 20px;
+	background: transparent;
+	border: 2px solid #8080807a;
+}

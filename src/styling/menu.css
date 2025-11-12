@@ -1,0 +1,145 @@
+/* MENU PAGE STYLING */
+
+.page-content section {
+	padding: 0 25px;
+}
+
+.page-content .navigation-bar {
+	padding-bottom: 0px;
+}
+
+.product-info {
+	gap: 15px;
+	display: flex;
+	margin-bottom: 60px;
+	flex-direction: column;
+}
+
+.product-info > figure {
+	display: grid;
+	justify-items: center;
+	grid-template-columns: 1fr;
+}
+
+.product-info > figure > img {
+	height: 350px;
+	max-width: 100%;
+	width: fit-content;
+}
+
+.product-info .contrainer {
+	gap: 10px;
+	font-size: 15px;
+	display: inherit;
+	color: var(--secondary-text-color);
+}
+
+.product-info .contrainer figure {
+	gap: 3px;
+	display: inherit;
+}
+
+.product-info > .contrainer > figure > img {
+	width: 16px;
+	height: 16px;
+}
+
+.product-info > p {
+	line-height: 171%;
+	font-weight: lighter;
+	color: var(--secondary-text-color);
+}
+
+.product-info > .rows {
+	gap: 25px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.product-info > .rows > .row-two .buttons {
+	width: 125px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.product-info > .rows > .row-two p,
+.product-info > .rows > .row-one > div > p  {
+	font-weight: bold;
+}
+
+.product-info > .rows > .row-two > p,
+.product-info > .rows > .row-one .names p,
+.product-info > .rows > .row-one > div > p {
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+.product-info > .rows > .row-one .names p {
+	margin: 0;
+	margin-top: 5px;
+}
+
+.product-info > .rows > .row-one .names {
+	display: flex;
+	justify-content: space-between;
+}
+
+.product-info > .rows .buttons button {
+	width: 40px;
+	height: 40px;
+	font-size: 18px;
+	position: unset;
+}
+
+input[type="range"] {
+	height: 7.5px; 
+	outline: none;
+	cursor: pointer;
+	appearance: none;
+	border-radius: 10px;
+	-webkit-appearance: none;
+	background: linear-gradient(to right, #e5e7eb, red);
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+	height: 3px;
+	border-radius: 10px;
+	background: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	width: 10px;
+	height: 15px;
+	cursor: pointer;
+	margin-top: -5px;
+	appearance: none;
+	background: red;
+	border-radius: 5px;
+	-webkit-appearance: none;
+	border: 2px solid white;
+}
+
+input[type="range"]::-moz-range-track {
+	height: 7.5px;
+	border-radius: 7.5px;
+	background: #e5e7eb;
+}
+input[type="range"]::-moz-range-progress {
+	height: 7.5px;
+	background: red;
+	border-radius: 7.5px;
+}
+
+input[type="range"]::-moz-range-thumb {
+	width: 10px;
+	height: 15px;
+	border: none;
+	cursor: pointer;
+	background: red;
+	border-radius: 5px;
+	border: 2px solid white;
+}
+
+
